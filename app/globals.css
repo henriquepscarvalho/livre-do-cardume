@@ -1,0 +1,374 @@
+@import "tailwindcss";
+
+/* =============================================
+   Tailwind v4 Theme: registra cores e fontes
+   como tokens do Tailwind para que utilities
+   como text-steel, bg-abyss, font-heading etc
+   funcionem nativamente.
+   ============================================= */
+@theme {
+  --color-abyss: #0A1520;
+  --color-abyss-mid: #0F1F2E;
+  --color-abyss-card: #132A3A;
+  --color-steel: #3B9EC2;
+  --color-steel-dark: #1A3A4A;
+  --color-acid: #E8C840;
+  --color-ice: #EDF3F6;
+
+  --font-heading: var(--heading), 'Space Grotesk', sans-serif;
+  --font-body: var(--body), 'Source Serif 4', serif;
+}
+
+/* =============================================
+   Design tokens (CSS custom properties)
+   ============================================= */
+:root {
+  --primary: #3B9EC2;
+  --secondary: #1A3A4A;
+  --dark: #0A1520;
+  --dark-mid: #0F1F2E;
+  --dark-card: #132A3A;
+  --light: #EDF3F6;
+  --accent: #E8C840;
+  --text-sec: #8BAAB8;
+  --text-muted: #4D7080;
+}
+
+/* =============================================
+   Base (Tailwind v4 preflight handles reset)
+   ============================================= */
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--body), 'Source Serif 4', serif;
+  background: var(--dark);
+  color: var(--light);
+}
+
+/* Grain overlay */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* =============================================
+   Reveal animations
+   ============================================= */
+.reveal { opacity: 0; transform: translateY(28px); transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1); }
+.reveal.active { opacity: 1; transform: translateY(0); }
+.reveal-d1 { transition-delay: 0.1s; }
+.reveal-d2 { transition-delay: 0.2s; }
+.reveal-d3 { transition-delay: 0.3s; }
+.reveal-d4 { transition-delay: 0.4s; }
+.reveal-d5 { transition-delay: 0.5s; }
+
+/* =============================================
+   Hero entrance (replaces anime.js)
+   ============================================= */
+@keyframes heroEntrance {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-el {
+  opacity: 0;
+  animation: heroEntrance 1s cubic-bezier(0.33, 1, 0.68, 1) both;
+}
+.hero-el:nth-child(1) { animation-delay: 0.3s; }
+.hero-el:nth-child(2) { animation-delay: 0.45s; }
+.hero-el:nth-child(3) { animation-delay: 0.6s; }
+.hero-el:nth-child(4) { animation-delay: 0.75s; }
+.hero-el:nth-child(5) { animation-delay: 0.9s; }
+
+/* =============================================
+   Steel text gradient
+   ============================================= */
+.steel-text {
+  background: linear-gradient(135deg, #2A7A9E 10%, #3B9EC2 50%, #6BC0E0 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* =============================================
+   Depth line
+   ============================================= */
+.depth-line { height: 1px; background: linear-gradient(90deg, transparent, rgba(59,158,194,0.15), transparent); }
+
+/* =============================================
+   Buttons
+   ============================================= */
+.btn-primary {
+  background: var(--primary);
+  color: var(--dark);
+  font-family: var(--heading), 'Space Grotesk', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.9rem 2rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  box-shadow: 0 2px 20px rgba(59,158,194,0.25);
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-primary:hover { box-shadow: 0 4px 30px rgba(59,158,194,0.4); transform: translateY(-2px); background: #4AB0D4; }
+
+.btn-ghost {
+  font-family: var(--heading), 'Space Grotesk', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 0.85rem 1.8rem;
+  border-radius: 6px;
+  border: 1px solid rgba(59,158,194,0.25);
+  background: transparent;
+  color: var(--primary);
+  cursor: pointer;
+  transition: all 0.35s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-ghost:hover { border-color: var(--primary); background: rgba(59,158,194,0.06); }
+
+/* =============================================
+   Ocean card
+   ============================================= */
+.ocean-card {
+  background: var(--dark-card);
+  border: 1px solid rgba(59,158,194,0.08);
+  border-radius: 12px;
+  transition: all 0.5s ease;
+}
+.ocean-card:hover { border-color: rgba(59,158,194,0.15); box-shadow: 0 0 30px rgba(59,158,194,0.05); transform: translateY(-3px); }
+
+/* =============================================
+   Email input
+   ============================================= */
+.email-input {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(59,158,194,0.2);
+  border-radius: 6px;
+  padding: 0.9rem 1.25rem;
+  font-family: var(--body), 'Source Serif 4', serif;
+  font-size: 0.95rem;
+  color: var(--light);
+  outline: none;
+  transition: border-color 0.3s;
+  width: 100%;
+}
+.email-input:focus { border-color: rgba(59,158,194,0.5); }
+.email-input::placeholder { color: var(--text-muted); font-style: italic; }
+
+/* =============================================
+   FAQ
+   ============================================= */
+.faq-btn {
+  width: 100%;
+  text-align: left;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+.faq-content { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+.faq-icon { transition: transform 0.3s ease; }
+
+/* =============================================
+   Keyframe animations
+   ============================================= */
+@keyframes caustic-1 {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.03; }
+  33% { transform: translate(40px, -30px) scale(1.15); opacity: 0.045; }
+  66% { transform: translate(-25px, 20px) scale(0.9); opacity: 0.025; }
+  100% { transform: translate(0, 0) scale(1); opacity: 0.03; }
+}
+@keyframes caustic-2 {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.025; }
+  33% { transform: translate(-30px, 40px) scale(0.85); opacity: 0.04; }
+  66% { transform: translate(35px, -20px) scale(1.1); opacity: 0.02; }
+  100% { transform: translate(0, 0) scale(1); opacity: 0.025; }
+}
+.caustic-a { animation: caustic-1 18s ease-in-out infinite; }
+.caustic-b { animation: caustic-2 22s ease-in-out infinite; }
+
+@keyframes swim {
+  0% { transform: translateX(0) translateY(0); }
+  25% { transform: translateX(12px) translateY(-6px); }
+  50% { transform: translateX(24px) translateY(0); }
+  75% { transform: translateX(12px) translateY(6px); }
+  100% { transform: translateX(0) translateY(0); }
+}
+.fish {
+  width: 8px; height: 4px;
+  background: var(--primary);
+  border-radius: 60% 40% 40% 60% / 50% 50% 50% 50%;
+  position: absolute;
+  animation: swim 8s ease-in-out infinite;
+}
+
+@keyframes breathe { 0%, 100% { opacity: 0.2; } 50% { opacity: 0.45; } }
+
+@keyframes cta-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(59,158,194,0.4); }
+  50% { box-shadow: 0 0 0 10px rgba(59,158,194,0); }
+}
+
+.preview-hl { background: rgba(59,158,194,0.12); padding: 2px 6px; border-radius: 3px; color: var(--primary); }
+
+/* =============================================
+   Hero background image
+   ============================================= */
+.hero-bg-section {
+  background: url('/images/hero-images/hero-10-olho-cardume.png') center center / cover no-repeat;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 65% 55% at 50% 50%, rgba(10,21,32,0.88) 0%, rgba(10,21,32,0.6) 55%, rgba(10,21,32,0.45) 100%),
+    linear-gradient(to bottom, rgba(10,21,32,0.3) 0%, rgba(10,21,32,0.75) 45%, rgba(10,21,32,0.95) 88%, var(--dark) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* =============================================
+   Mestre cards
+   ============================================= */
+.mestre-img {
+  height: 280px;
+  background-size: cover;
+  background-position: center top;
+  position: relative;
+}
+.mestre-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, var(--dark-card) 100%);
+}
+.mestre-card {
+  background: var(--dark-card);
+  border: 1px solid rgba(59,158,194,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.5s, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s;
+}
+.mestre-card:hover {
+  border-color: rgba(59,158,194,0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3), 0 0 30px rgba(59,158,194,0.06);
+}
+.mestre-body { padding: 1.5rem 1.75rem 2rem; }
+.mestre-role {
+  font-family: var(--heading), 'Space Grotesk', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+.mestre-name {
+  font-family: var(--heading), 'Space Grotesk', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--light);
+  margin-bottom: 0.75rem;
+}
+.mestre-desc {
+  font-family: var(--body), 'Source Serif 4', serif;
+  font-size: 0.9rem;
+  color: var(--text-sec);
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
+.mestre-quote {
+  font-family: var(--body), 'Source Serif 4', serif;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--text-sec);
+  line-height: 1.5;
+  padding-left: 1rem;
+  border-left: 2px solid rgba(59,158,194,0.25);
+  transition: border-color 0.4s, padding-left 0.4s;
+}
+.mestre-card:hover .mestre-quote {
+  border-left-color: var(--primary);
+  padding-left: 1.25rem;
+}
+
+/* =============================================
+   Quote section with background image
+   ============================================= */
+.quote-bg-section {
+  background: url('/images/conceitos/conceito-02-espelho-sujo.png') center center / cover no-repeat;
+  position: relative;
+}
+.quote-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 50%, rgba(15,31,46,0.9) 0%, rgba(15,31,46,0.7) 55%, rgba(15,31,46,0.5) 100%),
+    linear-gradient(to bottom, var(--dark) 0%, rgba(15,31,46,0.65) 15%, rgba(15,31,46,0.65) 85%, var(--dark) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* =============================================
+   CTA section with background image
+   ============================================= */
+.cta-bg-section {
+  background: url('/images/hero-images/hero-02-mergulho.png') center center / cover no-repeat;
+  position: relative;
+}
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 55% 50% at 50% 50%, rgba(10,21,32,0.85) 0%, rgba(10,21,32,0.6) 65%, rgba(10,21,32,0.4) 100%),
+    linear-gradient(to bottom, var(--dark) 0%, rgba(10,21,32,0.6) 18%, rgba(10,21,32,0.6) 82%, var(--dark) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* =============================================
+   Concept sections
+   ============================================= */
+.concept-float {
+  border-radius: 12px;
+  border: 1px solid rgba(59,158,194,0.1);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.concept-side-section {
+  position: relative;
+  overflow: hidden;
+}
+.concept-side-bg {
+  position: absolute;
+  right: -5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40%;
+  height: 80%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+/* =============================================
+   Responsive
+   ============================================= */
+@media (max-width: 768px) {
+  .mestre-img { height: 220px; }
+}
