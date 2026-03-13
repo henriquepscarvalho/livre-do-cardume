@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: "/images/logo-final/favicon-32.png",
-    apple: "/images/logo-final/favicon-180.png",
+    apple: "/images/logo-final/favicon-180.webp",
   },
 };
 

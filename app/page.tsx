@@ -116,7 +116,7 @@ export default function Page() {
       >
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <a href="#hero" className="flex items-center gap-2.5">
-            <Image src="/images/logo-final/favicon-180.png" alt="Livre do Cardume" width={32} height={32} className="rounded" />
+            <Image src="/images/logo-final/favicon-180.webp" alt="Livre do Cardume" width={32} height={32} className="rounded" />
             <span className="font-heading text-sm font-bold text-ice">Livre do Cardume</span>
           </a>
           <div className="hidden md:flex items-center gap-8">
@@ -156,7 +156,7 @@ export default function Page() {
         {/* Content */}
         <div className="relative z-10 max-w-3xl" style={{ zIndex: 3 }}>
           <div className="mb-8 hero-el flex justify-center">
-            <Image src="/images/logo-final/favicon-180.png" alt="" width={56} height={56} className="rounded-lg" style={{ opacity: 0.25 }} />
+            <Image src="/images/logo-final/favicon-180.webp" alt="" width={56} height={56} className="rounded-lg" style={{ opacity: 0.25 }} />
           </div>
 
           <h1 className="font-heading hero-el" style={{ letterSpacing: "-0.03em" }}>
@@ -213,7 +213,7 @@ export default function Page() {
       {/* BENEFICIOS */}
       <section id="beneficios" className="py-24 md:py-32 px-6 relative concept-side-section">
         <div className="absolute top-0 left-0 right-0 depth-line"></div>
-        <div className="concept-side-bg hidden lg:block" style={{ backgroundImage: "url('/images/conceitos/conceito-05-corrente-invisivel.png')" }}></div>
+        <div className="concept-side-bg hidden lg:block" style={{ backgroundImage: "url('/images/conceitos/conceito-05-corrente-invisivel.webp')" }}></div>
 
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-16">
@@ -278,7 +278,7 @@ export default function Page() {
           <div className="grid md:grid-cols-3 gap-5">
             {/* Kahneman */}
             <div className="mestre-card reveal reveal-d1">
-              <div className="mestre-img" style={{ backgroundImage: "url('/images/personagens/personagem-kahneman.png')" }}></div>
+              <div className="mestre-img" style={{ backgroundImage: "url('/images/personagens/personagem-kahneman.webp')" }}></div>
               <div className="mestre-body">
                 <div className="mestre-role">Nobel de Economia, 2002</div>
                 <div className="mestre-name">Daniel Kahneman</div>
@@ -289,7 +289,7 @@ export default function Page() {
 
             {/* Taleb */}
             <div className="mestre-card reveal reveal-d2">
-              <div className="mestre-img" style={{ backgroundImage: "url('/images/personagens/personagem-taleb.png')" }}></div>
+              <div className="mestre-img" style={{ backgroundImage: "url('/images/personagens/personagem-taleb.webp')" }}></div>
               <div className="mestre-body">
                 <div className="mestre-role">Autor de O Cisne Negro</div>
                 <div className="mestre-name">Nassim Taleb</div>
@@ -300,7 +300,7 @@ export default function Page() {
 
             {/* Ariely */}
             <div className="mestre-card reveal reveal-d3">
-              <div className="mestre-img" style={{ backgroundImage: "url('/images/personagens/personagem-ariely.png')" }}></div>
+              <div className="mestre-img" style={{ backgroundImage: "url('/images/personagens/personagem-ariely.webp')" }}></div>
               <div className="mestre-body">
                 <div className="mestre-role">Economista Comportamental</div>
                 <div className="mestre-name">Dan Ariely</div>
@@ -315,7 +315,7 @@ export default function Page() {
       {/* PREVIEW */}
       <section id="preview" className="py-24 md:py-32 px-6 relative concept-side-section overflow-hidden">
         <div className="absolute top-0 left-0 right-0 depth-line"></div>
-        <div className="absolute inset-0 pointer-events-none" style={{ background: "url('/images/conceitos/conceito-03-aquario.png') center center / cover no-repeat", opacity: 0.06 }}></div>
+        <div className="absolute inset-0 pointer-events-none" style={{ background: "url('/images/conceitos/conceito-03-aquario.webp') center center / cover no-repeat", opacity: 0.06 }}></div>
         <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 80% 80% at 50% 50%,transparent 20%,var(--dark) 85%)" }}></div>
         <div className="caustic-b absolute top-[20%] right-[10%] w-[400px] h-[300px] rounded-full pointer-events-none" style={{ background: "radial-gradient(ellipse,rgba(59,158,194,0.03) 0%,transparent 70%)" }}></div>
 
@@ -635,7 +635,7 @@ export default function Page() {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex flex-col items-center md:items-start gap-2">
             <div className="flex items-center gap-3">
-              <Image src="/images/logo-final/favicon-180.png" alt="" width={24} height={24} className="rounded" />
+              <Image src="/images/logo-final/favicon-180.webp" alt="" width={24} height={24} className="rounded" />
               <span className="font-heading text-sm font-bold text-ice">Livre do Cardume</span>
             </div>
             <span className="font-body text-xs italic" style={{ color: "var(--text-muted)" }}>O cardume segue. Você decide.</span>
