@@ -18,11 +18,11 @@ const sourceSerif = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
-  title: "Livre do Cardume — Vieses cognitivos com humor e sem piedade",
+  title: "Contra Maré — Vieses cognitivos com humor e sem piedade",
   description:
     "A newsletter semanal que mostra por que você pensa igual a todo mundo achando que pensa diferente. Um viés cognitivo por semana, com humor ácido e sem piedade.",
   openGraph: {
-    title: "Livre do Cardume",
+    title: "Contra Maré",
     description: "Vieses cognitivos com humor e sem piedade.",
     type: "website",
   },

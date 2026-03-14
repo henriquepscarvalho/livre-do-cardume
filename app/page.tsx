@@ -116,8 +116,8 @@ export default function Page() {
       >
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <a href="#hero" className="flex items-center gap-2.5">
-            <Image src="/images/logo-final/favicon-180.webp" alt="Livre do Cardume" width={32} height={32} className="rounded" />
-            <span className="font-heading text-sm font-bold text-ice">Livre do Cardume</span>
+            <Image src="/images/logo-final/favicon-180.webp" alt="Contra Maré" width={32} height={32} className="rounded" />
+            <span className="font-heading text-sm font-bold text-ice">Contra Maré</span>
           </a>
           <div className="hidden md:flex items-center gap-8">
             <a href="#beneficios" className="font-heading text-xs font-medium hover:text-steel transition-colors" style={{ color: "var(--text-sec)" }}>Benefícios</a>
@@ -334,7 +334,7 @@ export default function Page() {
                 {/* Header */}
                 <div className="flex items-center justify-between mb-8 pb-4" style={{ borderBottom: "1px solid rgba(59,158,194,0.08)" }}>
                   <div>
-                    <div className="font-heading text-xs font-bold text-ice">Livre do Cardume</div>
+                    <div className="font-heading text-xs font-bold text-ice">Contra Maré</div>
                     <div className="font-heading text-[0.6rem]" style={{ color: "var(--text-muted)" }}>Edição #001</div>
                   </div>
                   <div className="font-heading text-[0.55rem] tracking-[0.15em] uppercase px-3 py-1 rounded" style={{ background: "rgba(59,158,194,0.1)", color: "var(--primary)" }}>O Viés Cognitivo da Semana</div>
@@ -400,7 +400,7 @@ export default function Page() {
           </blockquote>
           <div className="mt-6 flex items-center justify-center gap-3">
             <div className="w-8 h-px" style={{ background: "rgba(59,158,194,0.3)" }}></div>
-            <span className="font-heading text-[0.6rem] tracking-[0.15em] uppercase" style={{ color: "var(--text-muted)" }}>Livre do Cardume</span>
+            <span className="font-heading text-[0.6rem] tracking-[0.15em] uppercase" style={{ color: "var(--text-muted)" }}>Contra Maré</span>
             <div className="w-8 h-px" style={{ background: "rgba(59,158,194,0.3)" }}></div>
           </div>
         </div>
@@ -420,7 +420,7 @@ export default function Page() {
                 A maioria das pessoas não toma decisões. Elas seguem padrões invisíveis criados por vieses cognitivos, atalhos mentais que parecem inteligentes na hora, mas cobram o preço depois.
               </p>
               <p className="font-body text-base leading-relaxed" style={{ color: "var(--text-sec)" }}>
-                O Livre do Cardume não vai te fazer &quot;pensar melhor&quot;. Mas vai te mostrar por que você pensa do jeito que pensa. O que você faz com isso é problema seu.
+                O Contra Maré não vai te fazer &quot;pensar melhor&quot;. Mas vai te mostrar por que você pensa do jeito que pensa. O que você faz com isso é problema seu.
               </p>
             </div>
             <div className="reveal reveal-d2 relative">
@@ -636,11 +636,11 @@ export default function Page() {
           <div className="flex flex-col items-center md:items-start gap-2">
             <div className="flex items-center gap-3">
               <Image src="/images/logo-final/favicon-180.webp" alt="" width={24} height={24} className="rounded" />
-              <span className="font-heading text-sm font-bold text-ice">Livre do Cardume</span>
+              <span className="font-heading text-sm font-bold text-ice">Contra Maré</span>
             </div>
             <span className="font-body text-xs italic" style={{ color: "var(--text-muted)" }}>O cardume segue. Você decide.</span>
           </div>
-          <div className="font-heading text-xs" style={{ color: "var(--text-muted)" }}>&copy; <span id="year"></span> Livre do Cardume. Todos os direitos reservados.</div>
+          <div className="font-heading text-xs" style={{ color: "var(--text-muted)" }}>&copy; <span id="year"></span> Contra Maré. Todos os direitos reservados.</div>
         </div>
       </footer>
     </>
